@@ -1,0 +1,203 @@
+name: SMP-Core
+version: 1.1.0
+main: net.meetlounge.core.Core
+api-version: '1.21'
+author: AronQLB
+website: https://example.com
+
+description: |
+  Configurable SMP core with economy, clans, moderation, regions, warps, homes and visual systems.
+
+load: POSTWORLD
+
+commands:
+  core:
+    description: Main core command
+    usage: /core
+    aliases:
+      - smpcore
+  clan:
+    description: Clan command
+    usage: /clan
+    aliases:
+      - clans
+      - c
+  rank:
+  pay:
+  ban:
+    description: Ban a player
+    usage: /ban <spieler> <id>
+
+  unban:
+    description: Unban a player
+    usage: /unban <spieler>
+
+  baninfo:
+    description: Show ban information
+    usage: /baninfo <spieler>
+  report:
+  reports:
+  spawn:
+  setspawn:
+  sethome:
+  home:
+  homes:
+  delhome:
+  tpa:
+  tpaccept:
+  tpdeny:
+  rtp:
+  setwarp:
+  warp:
+  warps:
+  delwarp:
+  mute:
+  unmute:
+  clearchat:
+    aliases:
+      - cc
+  slowchat:
+    aliases:
+      - sc
+  chatmute:
+  region:
+  coins:
+  npc:
+  level:
+  gm:
+  fly:
+  vanish:
+  auktion:
+    aliases:
+      - ah
+  nether:
+  end:
+  image:
+  bloodmoon:
+    description: Manage BloodMoon events
+    usage: /bloodmoon <start|stop|status>
+
+permissions:
+  meetlounge.*:
+    default: op
+    children:
+      meetlounge.core.admin: true
+      meetlounge.core.reload: true
+      meetlounge.core.debug: true
+      meetlounge.core.save: true
+      meetlounge.core.player: true
+      meetlounge.gamemode: true
+      meetlounge.fly: true
+      meetlounge.fly.other: true
+      meetlounge.vanish: true
+      meetlounge.vanish.see: true
+      meetlounge.maintenance.bypass: true
+      meetlounge.maintenance.manage: true
+      meetlounge.chat.bypass: true
+      meetlounge.chat.moderation: true
+      meetlounge.economy.admin: true
+      meetlounge.rank.manage: true
+      meetlounge.clan.create: true
+      meetlounge.clan.delete: true
+      meetlounge.clan.admin: true
+      meetlounge.ban.manage: true
+      meetlounge.ban.info: true
+      meetlounge.report.create: true
+      meetlounge.report.staff: true
+      meetlounge.report.close: true
+      meetlounge.pay.use: true
+      meetlounge.clan.bank.deposit: true
+      meetlounge.clan.bank.withdraw: true
+      meetlounge.chat.color: true
+      meetlounge.chat.format: true
+      meetlounge.bloodmoon.admin: true
+
+  meetlounge.core.admin:
+    default: op
+
+  meetlounge.clan.create:
+    default: true
+
+  meetlounge.clan.delete:
+    default: true
+
+  meetlounge.clan.admin:
+    default: op
+
+  meetlounge.maintenance.bypass:
+    default: op
+
+  meetlounge.maintenance.manage:
+    default: op
+
+  meetlounge.core.reload:
+    default: op
+
+  meetlounge.core.debug:
+    default: op
+
+  meetlounge.core.save:
+    default: op
+
+  meetlounge.core.player:
+    default: op
+
+  meetlounge.gamemode:
+    default: op
+
+  meetlounge.fly:
+    default: op
+
+  meetlounge.fly.other:
+    default: op
+
+  meetlounge.vanish:
+    default: op
+
+  meetlounge.vanish.see:
+    default: op
+
+  meetlounge.chat.bypass:
+    default: op
+
+  meetlounge.chat.moderation:
+    default: op
+
+  meetlounge.economy.admin:
+    default: op
+
+  meetlounge.rank.manage:
+    default: op
+
+  meetlounge.ban.manage:
+    default: op
+
+  meetlounge.ban.info:
+    default: op
+
+  meetlounge.report.create:
+    default: true
+
+  meetlounge.report.staff:
+    default: op
+
+  meetlounge.report.close:
+    default: op
+
+  meetlounge.pay.use:
+    default: true
+
+  meetlounge.clan.bank.deposit:
+    default: true
+
+  meetlounge.clan.bank.withdraw:
+    default: true
+
+  meetlounge.chat.color:
+    default: op
+
+  meetlounge.chat.format:
+    default: op
+
+  meetlounge.bloodmoon.admin:
+    default: op

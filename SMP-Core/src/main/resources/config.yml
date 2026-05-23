@@ -1,0 +1,283 @@
+# =========================================================
+# SMP-Core Configuration
+# Every gameplay-facing value should be configurable here.
+# Existing server files are auto-filled with new defaults on startup/reload.
+# =========================================================
+
+config-version: 2
+
+debug: true
+
+server:
+  name: "SMP-Core"
+  language: "de"
+  maintenance: false
+
+  join-message-enabled: true
+  quit-message-enabled: true
+
+  max-players: 100
+
+first-join:
+  reward:
+    coins: 1000
+  starter-items:
+    enabled: true
+    # Format: slot:MATERIAL:amount
+    items:
+      - "0:IRON_SWORD:1"
+      - "1:STONE_PICKAXE:1"
+      - "2:STONE_AXE:1"
+      - "3:COOKED_BEEF:64"
+      - "4:IRON_HELMET:1"
+      - "5:IRON_CHESTPLATE:1"
+      - "6:LEATHER_LEGGINGS:1"
+      - "7:LEATHER_BOOTS:1"
+      - "8:SHIELD:1"
+
+branding:
+  name: "SMP-Core"
+  author: "YourName"
+  website: "https://example.com"
+  primary-color: "#36ff8a"
+  secondary-color: "#ffffff"
+
+motd:
+  normal:
+    line1: "          &l<gradient:#36ff8a:#ffffff>SMP-Core</gradient> &8| &71.21.x"
+    line2: "    &a&lONLINE &8→ &7Survival &8• &7Clans &8• &7Community"
+
+  maintenance:
+    line1: "          &l<gradient:#36ff8a:#ffffff>SMP-Core</gradient> &8| &71.21.x"
+    line2: "              &cᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ &8→ &#FF0000R&#F82424e&#F24848l&#EB6C6Ce&#E48F8Fa&#DEB3B3s&#D7D7D7e"
+
+database:
+
+  # SQLITE
+  # MYSQL
+  # MARIADB
+  # POSTGRESQL
+  type: SQLITE
+
+  sqlite:
+    file: "database.db"
+
+  mysql:
+    host: "127.0.0.1"
+    port: 3306 
+    database: "minecraft"
+    username: "root"
+    password: "change-me"
+    useSSL: false
+    autoReconnect: true
+
+    pool:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+
+visuals:
+  sidebar:
+    enabled: true
+    title: "&l<gradient:#36ff8a:#ffffff>SMP-Core</gradient>"
+    update-interval-seconds: 1
+    lines:
+      - ""
+      - "&l&7Spielerinfos:"
+      - " &8• &7Name: &f%player%"
+      - " &8• &7Ping: &#36ff8a%ping%ms"
+      - " &8• &7Rang: %rank%"
+      - " &8• &7Spielzeit: &f%playtime%"
+      - " &8• &7Coins: &#36ff8a%coins%"
+      - " &8• &7Level: &f%level%"
+      - ""
+      - "&l<gradient:#36ff8a:#ffffff>ClanStats</gradient>"
+      - " &8• &7Name: &f%clan_name%"
+      - " &8• &7Ersteller: &f%clan_owner%"
+      - " &8• &7Kills: &f%clan_kills%"
+      - " &8• &7K/D: &f%clan_kd%"
+      - " &8• &7Clankasse: &#36ff8a%clan_bank%"
+      - ""
+
+  tablist:
+    enabled: true
+    update-interval-seconds: 2
+    header:
+      - "&l<gradient:#36ff8a:#ffffff>SMP-Core</gradient>"
+      - "&7Dein Zuhause für Survival, Clans und Abenteuer"
+      - ""
+    footer:
+      - ""
+      - "&7Online: &#36ff8a%online%"
+      - "&8/discord &7• &8/hilfe"
+
+  chat:
+    enabled: true
+    format: "%rank% &8| &7%player% &8» &f%message%"
+
+level:
+  zombie-spawner:
+    enabled: true
+    interval-seconds: 20
+    min-distance: 18
+    max-distance: 32
+    max-per-player: 4
+
+bloodmoon:
+  enabled: true
+  night-chance: 0.25
+  mob-level-bonus: 5
+  damage-multiplier: 1.35
+  xp-multiplier: 1.8
+  coin-multiplier: 2.0
+  boss-chance: 0.05
+  boss-health-multiplier: 2.5
+  rare-drop-chance: 0.08
+
+clans:
+  creation-cost: 10000
+  tag-length: 4
+
+cache:
+  playerdata:
+    enabled: true
+
+autosave:
+  enabled: true
+
+  # In Minuten
+  interval: 5
+
+modules:
+
+  player-data: true
+  commands: true
+  permissions: true
+  scheduler: true
+  maintenance: true
+  economy: false
+  ranks: false
+
+ranks:
+  custom: {}
+
+permissions:
+  custom-nodes: []
+  rank-permissions:
+    player: []
+    meet: []
+    lounge: []
+    content: []
+    supporter: []
+    moderator: []
+    developer: []
+    admin: []
+
+commands:
+  core:
+    enabled: true
+  clan:
+    enabled: true
+  rank:
+    enabled: true
+  ban:
+    enabled: true
+  unban:
+    enabled: true
+  baninfo:
+    enabled: true
+  report:
+    enabled: true
+  reports:
+    enabled: true
+  pay:
+    enabled: true
+  spawn:
+    enabled: true
+  setspawn:
+    enabled: true
+  tpa:
+    enabled: true
+  tpaccept:
+    enabled: true
+  rtp:
+    enabled: true
+  homes:
+    enabled: true
+  sethome:
+    enabled: true
+  home:
+    enabled: true
+  delhome:
+    enabled: true
+  setwarp:
+    enabled: true
+  warp:
+    enabled: true
+  warps:
+    enabled: true
+  mute:
+    enabled: true
+  unmute:
+    enabled: true
+  clearchat:
+    enabled: true
+  slowchat:
+    enabled: true
+  chatmute:
+    enabled: true
+  region:
+    enabled: true
+  coins:
+    enabled: true
+  npc:
+    enabled: true
+  level:
+    enabled: true
+  gm:
+    enabled: true
+  fly:
+    enabled: true
+  vanish:
+    enabled: true
+  auktion:
+    enabled: true
+  nether:
+    enabled: true
+  end:
+    enabled: true
+  image:
+    enabled: true
+  bloodmoon:
+    enabled: true
+
+logging:
+  console:
+    enabled: true
+
+  file:
+    enabled: true
+
+cooldowns:
+  enabled: true
+
+performance:
+  async-player-loading: true
+  async-saving: true
+
+messages:
+  prefix: "&8[&aSMP-Core&8] "
+
+rtp:
+  radius: 20000
+  protected-spawn-radius: 10000
+  min-distance-from-spawn: 11000
+combat:
+  duration-seconds: 15
+spawn-protection:
+  enabled: true
+  radius: 100
+  block-monsters: true
+  block-animals: true
+  block-slimes: true
+  block-ambient: true

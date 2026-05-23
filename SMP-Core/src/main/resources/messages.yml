@@ -1,0 +1,179 @@
+# =========================================================
+# SMP-Core Messages
+# =========================================================
+
+prefix: "&8[&aSMP-Core&8] "
+
+# Texts that are still sent by older modules through raw calls are copied here
+# automatically the first time they are used. You can edit them after they appear.
+runtime-messages: {}
+
+# =========================================================
+# General
+# =========================================================
+
+no-permission: "%prefix%&cDazu hast du keine Rechte."
+
+player-only: "%prefix%&cDieser Befehl ist nur für Spieler."
+
+unknown-command: "%prefix%&cUnbekannter Befehl."
+
+invalid-usage: "%prefix%&cUngültige Verwendung."
+
+command-not-found: "%prefix%&cDieser Befehl existiert nicht."
+
+not-online: "%prefix%&cDieser Spieler ist nicht online."
+
+reload-success: "%prefix%&aDer Core wurde erfolgreich neu geladen."
+
+error-occurred: "%prefix%&cEin interner Fehler ist aufgetreten."
+
+feature-disabled: "%prefix%&cDieses Feature ist deaktiviert."
+
+cooldown: "%prefix%&cBitte warte noch &f%timeout%&c."
+
+# =========================================================
+# Core Command
+# =========================================================
+
+core-header: "&8&m--------------------------------"
+
+core-title: "&aSMP-Core &7v%version%"
+
+core-author: "&7Entwickler: &f%author%"
+
+core-description: "&7Eigenes SMP-Core-System"
+
+core-footer: "&8&m--------------------------------"
+
+core-reloaded: "%prefix%&aCore wurde neu geladen."
+
+# =========================================================
+# Join / Quit
+# =========================================================
+
+join-message: "&8[&a+&8] &7%player%"
+
+quit-message: "&8[&c-&8] &7%player%"
+
+first-join: "%prefix%&aWillkommen auf dem SMP!"
+
+# =========================================================
+# Maintenance
+# =========================================================
+
+maintenance-enabled: "%prefix%&cMaintenance wurde aktiviert."
+
+maintenance-disabled: "%prefix%&aMaintenance wurde deaktiviert."
+
+maintenance-kick: "&cDer Server befindet sich aktuell im Wartungsmodus."
+
+# =========================================================
+# Database
+# =========================================================
+
+database-connected: "%prefix%&aDatenbank erfolgreich verbunden."
+
+database-disconnected: "%prefix%&cDatenbank getrennt."
+
+database-error: "%prefix%&cEin Datenbankfehler ist aufgetreten."
+
+database-saving: "%prefix%&7Daten werden gespeichert..."
+
+database-loading: "%prefix%&7Daten werden geladen..."
+
+# =========================================================
+# PlayerData
+# =========================================================
+
+playerdata-loaded: "%prefix%&7Spielerdaten geladen."
+
+playerdata-saved: "%prefix%&7Spielerdaten gespeichert."
+
+playerdata-created: "%prefix%&7Neue Spielerdaten erstellt."
+
+# =========================================================
+# Permissions
+# =========================================================
+
+permission-denied: "%prefix%&cKeine Berechtigung."
+
+# =========================================================
+# Debug
+# =========================================================
+
+debug-enabled: "%prefix%&aDebug-Modus aktiviert."
+
+debug-disabled: "%prefix%&cDebug-Modus deaktiviert."
+
+debug-prefix: "&8[&eDEBUG&8] "
+
+# =========================================================
+# Economy
+# =========================================================
+
+economy-balance: "%prefix%&7Kontostand: &a%coins% Coins"
+
+economy-add: "%prefix%&a%coins% Coins erhalten."
+
+economy-remove: "%prefix%&c%coins% Coins entfernt."
+
+economy-set: "%prefix%&7Kontostand gesetzt auf &a%coins% Coins"
+
+economy-insufficient: "%prefix%&cNicht genügend Coins."
+
+# =========================================================
+# Rank System
+# =========================================================
+
+rank-changed: "%prefix%&7Rang geändert zu &a%rank%"
+
+rank-no-access: "%prefix%&cDu hast keinen Zugriff auf diesen Rang."
+
+# =========================================================
+# AutoSave
+# =========================================================
+
+autosave-start: "%prefix%&7Automatisches Speichern gestartet."
+
+autosave-finished: "%prefix%&aAutomatisches Speichern abgeschlossen."
+
+# =========================================================
+# Module System
+# =========================================================
+
+module-enabled: "%prefix%&aModul aktiviert: &f%module%"
+
+module-disabled: "%prefix%&cModul deaktiviert: &f%module%"
+
+module-reloaded: "%prefix%&7Modul neu geladen: &f%module%"
+
+module-failed: "%prefix%&cModul konnte nicht geladen werden: &f%module%"
+
+# =========================================================
+# Scheduler
+# =========================================================
+
+task-started: "%prefix%&7Task gestartet."
+
+task-finished: "%prefix%&aTask abgeschlossen."
+
+task-cancelled: "%prefix%&cTask abgebrochen."
+
+# =========================================================
+# Cache
+# =========================================================
+
+cache-cleared: "%prefix%&7Cache geleert."
+
+cache-loaded: "%prefix%&7Cache geladen."
+
+# =========================================================
+# Logging
+# =========================================================
+
+log-startup: "&aSMP-Core wurde gestartet."
+
+log-shutdown: "&cSMP-Core wurde gestoppt."
+
+log-reload: "&eSMP-Core wurde neu geladen."

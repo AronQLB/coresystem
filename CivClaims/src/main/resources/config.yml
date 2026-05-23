@@ -1,0 +1,3 @@
+claim-cost: 100.0
+max-claims-per-city: 100
+tax-interval-minutes: 60
